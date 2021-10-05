@@ -1,0 +1,55 @@
+{
+  "name": "stickyTask",
+  "description": "You use sticky notes to organize and schedule your tasks. Your tasks tend to not be done in one sitting and have to be revisited. Upon revisiting a task you realize all the related tabs in your browser and local documents have been closed. In other words task switching is a pain. Sticky Task keeps track of important web pages and local documents you visit while you work on a task. Now when you start working on something else and then continue the original task Sticky Task you will automatically open all key websites and local documents so you can jump right back into work!",
+  "version": "0.0.0",
+  "author": "Kirill Dubovitskiy",
+  "bin": {
+    "stickyTask": "./bin/run"
+  },
+  "bugs": "https://github.com/bra1ndump/stickyTask/issues",
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.26.0",
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.10.2",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "npm-check-updates": "^11.8.5",
+    "typescript": "^4.4.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/bra1ndump/stickyTask",
+  "license": "MIT",
+  "main": "lib/runner.js",
+  "oclif": {
+    "bin": "stickyTask"
+  },
+  "repository": "bra1ndump/stickyTask",
+  "scripts": {
+    "build": "tsc",
+    "posttest": "eslint ./src --ext .ts --config .eslintrc",
+    "test": "nyc ./node_modules/.bin/_mocha 'test/**/*.test.ts'"
+  },
+  "types": "lib/index.d.ts",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.3",
+    "@testdeck/mocha": "^0.1.2",
+    "@types/lodash": "^4.14.175",
+    "chai": "^4.3.4",
+    "lodash": "^4.17.21",
+    "mocha": "^9.1.2",
+    "nyc": "^15.1.0",
+    "ts-mockito": "^2.6.1",
+    "ts-node": "^10.2.1",
+    "tslib": "^2.3.1"
+  }
+}

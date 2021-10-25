@@ -7,12 +7,27 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Mocha Tests",
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "args": [
+                "--require", "ts-node/register",
+                "-u", "tdd",
+                "--timeout", "999999",
+                "--colors", "--recursive",
+                "${workspaceFolder}/test/**/*.ts"
+            ],
+            "preLaunchTask": "Compile",
+            "sourceMaps": true,
+            "console": "integratedTerminal",
+        }, 
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Launch Program",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/lib/runner.js",
-            "args": ["--name", "Kirill"],
+            "program": "${workspaceFolder}/lib/index.js",
             "preLaunchTask": "Compile",
             "sourceMaps": true,
             "console": "integratedTerminal",

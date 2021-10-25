@@ -1,10 +1,8 @@
-import {Command, flags} from '@oclif/command'
+// import {Task, taskBoardStream} from './stickyTask'
+import {taskBoardObservable} from './TaskBoard'
 
-class StickyTask extends Command {
-
-  async run() {
-
-  }
+async function main() {
+    taskBoardObservable().subscribe()
 }
 
-export = StickyTask
+main()

@@ -4,12 +4,10 @@
     "importHelpers": true,
     "module": "commonjs",
     "outDir": "lib",
-    "rootDir": ".",
     "strict": true,
     "target": "es2017",
     "sourceMap": true,
-    "composite": true,
-    // "esModuleInterop": true
+    "experimentalDecorators": true
   },
   "include": [
     "src/**/*"
